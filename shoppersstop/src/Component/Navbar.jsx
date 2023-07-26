@@ -65,7 +65,7 @@ const Navbar = () => {
                 </div>}
             </nav>
             {/* entire screen  for login */}
-            {isshown ? <div id="model" >
+            {isshown? <div id="model">
                 {/* small login screen   */}
                 <div id="sign-screen" >
                     {/* inside login black area  */}
