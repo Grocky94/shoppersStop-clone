@@ -2,22 +2,31 @@ import React, { useState } from 'react'
 import "../Component/Navbar.css"
 const Navbar = () => {
     // state use for UI 
-    const [isshown, setIsshown] = useState(false);
+    const [isshown, setIsshown] = useState(false);//login logout
+    const [iscategory, setIsCategory] = useState(false); //category 
 
-    const open = (e) => {
-        setIsshown(true);
+    const openlogin = () => {
+        setIsshown(true);//login logout
 
     }
-    const close = () => {
-        setIsshown(false)
+    const openCategory = () => {
+        setIsCategory(true);
+
     }
+    const closelogin = () => {
+        setIsshown(false);
+    }
+    const closeCategory = () => {
+        setIsCategory(false);
+    }
+
 
     return (
         <div>
             <nav>
                 <div id="navbar-inner">
                     <div id="navbar-left-category">
-                        <div id="categories">CATEGORIES</div>
+                        <div id="categories" onMouseEnter={openCategory} onMouseLeave={closeCategory}>CATEGORIES</div>
                         <div id="luxe">L U X E</div>
                         <div id="bargains">BARGAINS</div>
                     </div>
@@ -37,12 +46,12 @@ const Navbar = () => {
                         <div className='navbar-icon-area'>
                             <i class="fa-solid fa-bag-shopping fa-xl"></i>
                         </div>
-                        <div className='navbar-icon-area' onMouseDown={open}>
-                            <i class="fa-regular fa-user"></i>
+                        <div className='navbar-icon-area' onMouseOver={openlogin}>
+                            <i class="fa-regular fa-user fa-xl"></i>
                         </div>
                     </div>
                 </div>
-                <div id="category-dropdown">
+                {iscategory && <div id="category-dropdown" onMouseEnter={openCategory} onMouseLeave={closeCategory}>
                     <div id="inner-category-dropdown">
                         <div>MEN</div>
                         <div>WOMEN</div>
@@ -53,17 +62,17 @@ const Navbar = () => {
                         <div>GIFTS</div>
                         <div>BRANDS</div>
                     </div>
-                </div>
+                </div>}
             </nav>
             {/* entire screen  for login */}
-            {isshown? <div id="model" onMouseDown={close} >
+            {isshown ? <div id="model" >
                 {/* small login screen   */}
                 <div id="sign-screen" >
                     {/* inside login black area  */}
                     <div id="banner-within-sign">
                         <div id="banner-sign-align">
                             <div>
-                                <p id="skip">Skip</p>
+                                <p id="skip" onClick={closelogin}><i class="fa-solid fa-xmark fa-xl"></i></p>
                             </div>
                             <div>
                                 <h1 id="log-title">Login/Signup</h1>

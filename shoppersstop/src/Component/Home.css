@@ -1,0 +1,68 @@
+.sale-banner {
+    height: 20vh;
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+}
+
+.sale-banner>img {
+    height: 100%;
+    width: 100%;
+}
+
+.sliding-banner {
+    height: 65vh;
+    width: 100%;
+    border: 1px solid #000;
+    position: relative;
+    display: flex;
+}
+
+.sliding-banner-arrows-left {
+    height: 65vh;
+    width: 5%;
+    position: absolute;
+    border: 1px solid #000;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-small-div {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+.round-small-div>i{
+    color: #fff;
+}
+
+.image-holder-div {
+    height: 65vh;
+    width: 90%;
+    border: 1px solid #000;
+    margin-left: 5%;
+}
+.image-holder-div>img{
+    height: 100%;
+    width: 100%;
+}
+
+.sliding-banner-arrows-right {
+    height: 65vh;
+    width: 5%;
+    position: absolute;
+    border: 1px solid #000;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

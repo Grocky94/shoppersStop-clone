@@ -1,0 +1,123 @@
+.singleProduct-screen {
+    /* height: 100vh; */
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.singleProduct-screen-align {
+    /* height: 100vh; */
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid #000;
+}
+
+.singleProduct-path {
+    height: 10vh;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.singleProduct-partition-parent {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.singleProduct-productShowing-side-left {
+    height: 100vh;
+    width: 60%;
+    border: 1px solid #000;
+}
+
+.singleProduct-describing-side-right {
+    height: 100vh;
+    width: 38%;
+    border: 1px solid #000;
+}
+
+.singleProduct-name {
+    height: 10vh;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+}
+
+.singleProduct-only-name {
+    height: 10vh;
+    width: 70%;
+    border: 1px solid #000;
+}
+
+.singleProduct-present-rating {
+    height: 10vh;
+    width: 30%;
+    border: 1px solid #000;
+}
+
+.its-name {
+    height: 5vh;
+    width: 100%;
+    border: 1px solid #000;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+}
+
+.star-mention {
+    height: 5vh;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+
+}
+
+.star-mention>i {
+    color: yellow;
+    margin-left: 60%;
+
+}
+
+.star-mention>p {
+    font-size: 1.8em;
+}
+
+.star-mention-reviewer {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.singleProduct-amount{
+    gap:5%;
+    margin: 2% 0;
+}
+.money{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.lineover{
+    text-decoration: line-through;
+}
+.orange{
+    color: orange;
+}
+.parent-count-of-reviewers{
+    display: flex;
+    align-items: center;
+    margin: 2% 0;
+}
+.count-of-reviewers{
+    height:5vh;
+    width:10%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
