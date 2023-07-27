@@ -71,7 +71,7 @@ nav {
     position: relative;
     height: 6vh;
     width: 50%;
-    /* border-: 1px solid #000; */
+    border-bottom: 1px solid #000;
     display: flex;
 }
 
@@ -80,7 +80,7 @@ nav {
     position: absolute;
     left: 0;
     width: 85%;
-    /* border-bottom: 1px solid black; */
+    border: none;
     outline: none;
 
 }
