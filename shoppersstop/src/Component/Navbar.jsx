@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "../Component/Navbar.css"
+import { AuthContext } from '../Auth.context';
+// import { AuthContext } from '../Auth.context';
 const Navbar = () => {
     // state use for UI 
     const [isshown, setIsshown] = useState(false);//login logout modal
     const [iscategory, setIsCategory] = useState(false); //category  dropwown
     const [user, setUser] = useState({ name: '', email: '', password: '' }) // user register
+    const { state,login} = useContext(AuthContext)
     console.log(user);
     const [userLogin, setUserLogin] = useState({ email: '', password: "" }); // user login
     console.log(userLogin)
@@ -29,6 +32,7 @@ const Navbar = () => {
     const closeCategory = () => {
         setIsCategory(false);
     }
+
     const handleChangeregister = (event) => {
         setUser({ ...user, [event.target.name]: event.target.value })
 
@@ -36,6 +40,7 @@ const Navbar = () => {
     const handleChangeLogin = (event) => {
         setUserLogin({ ...userLogin, [event.target.name]: event.target.value })
     }
+
 
 
     const handleSubmitregister = (event) => {
@@ -49,6 +54,7 @@ const Navbar = () => {
             // setUserLogin({ email: '', password: '' });
             alert("registration successful")
             // router("/login")
+            login(user);
         } else {
             alert("fill all credential first")
         }
@@ -72,7 +78,6 @@ const Navbar = () => {
                 }
                 alert("login successful")
                 localStorage.setItem("Current-User", JSON.stringify(userLogin));
-                setIsshown(false)
             } else {
                 alert("no records found")
                 window.confirm("need to register first")
@@ -85,6 +90,8 @@ const Navbar = () => {
         }
     }
 
+    
+
     const handleSubmitLogout = () => {
         const currentUser = JSON.parse(localStorage.getItem("Current-User"));
         if (currentUser) {
@@ -93,6 +100,14 @@ const Navbar = () => {
             setIsshown(false);
         }
     }
+    useEffect(()=>{
+        // const currentUser = JSON.parse(localStorage.getItem("Current-User"))
+        if(state?.currentUser){
+            setIsshown(false);
+        }else{
+            setIsshown(false);
+        }
+    },[state])
     return (
         <div>
             <nav>
